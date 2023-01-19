@@ -8,11 +8,11 @@ export const FriendListItem = ({friend: {avatar, name, isOnline}}) => {
         background-color: ${isOnline ? "green" : "red"};
     `;
 
-    return <li className={styles.item}>
+    return <div className={styles.item}>
         <Status className={styles.status} />
         <img className={styles.avatar} src={avatar} alt="User avatar" width="48" />
         <p className={styles.name}>{name}</p>
-    </li>
+    </div>
 };
 
 FriendListItem.propTypes = {
